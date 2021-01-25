@@ -9,11 +9,11 @@ import { useStateValue } from "./components/StateProvider";
 import { auth } from './components/firebase';
 
 function App() {
-  const [{user }, dispatch]=useStateValue();
+  const [{}, dispatch]=useStateValue();
   useEffect(()=>{
     auth.onAuthStateChanged((authUser)=>{
       if(authUser){
-        dispatch({
+        dispatch ({
           type:"SET_USER",
           user:authUser,
         })
@@ -24,7 +24,7 @@ function App() {
         })
       }
     })
-  },[])
+  }, []);
 
   return (
 
