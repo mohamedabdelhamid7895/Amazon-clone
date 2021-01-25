@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react'
 import { useStateValue } from './StateProvider'
 import './Checkout.css';
 import CheckoutProduct from './CheckoutProduct.js';
 import Subtotal from './Subtotal';
+// eslint-disable-next-line no-unused-vars
 import CurrencyFormat from "react-currency-format";
 
 function Checkout() {
@@ -10,6 +12,7 @@ function Checkout() {
     return (
         <div className="checkout">
           <div className="checkout__left">
+           
             <img className="checkout__ad" src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg" alt="checkout image" />
             
             {basket.length===0 ? (

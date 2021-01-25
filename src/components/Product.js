@@ -1,3 +1,4 @@
+/* eslint-disable no-empty-pattern */
 import React from 'react'
 import './Prouct.css';
 import { useStateValue } from './StateProvider';
