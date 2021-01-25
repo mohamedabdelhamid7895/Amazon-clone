@@ -9,8 +9,9 @@ import { useStateValue } from "./components/StateProvider";
 import { auth } from './components/firebase';
 
 function App() {
+  // eslint-disable-next-line no-empty-pattern
   const [{}, dispatch]=useStateValue();
-  useEffect(()=>{
+  useEffect( ()=>{
     auth.onAuthStateChanged((authUser)=>{
       if(authUser){
         dispatch ({
@@ -24,7 +25,8 @@ function App() {
         })
       }
     })
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[]);
 
   return (
 
